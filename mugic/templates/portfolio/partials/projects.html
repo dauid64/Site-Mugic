@@ -1,0 +1,55 @@
+{% load static %}
+
+<div id="portfolio" class="project project-list-item">
+    <div class="project-cover">
+        {% if not is_detail_page %}
+        <a href="{% url 'projetos:projeto' projeto.id %}">
+            <img class="project-list-imagens" src="{{ projeto.cover.url }}" alt="projetos">
+            <div class="title-project-list">
+                <p>{{projeto.title}}</p>
+            </div>
+        </a>
+    </div>
+    {% else %}
+    <div class="main-container-soloimg">
+        <div class="princiapl-container-soloimg">
+            {% if projeto.description %}
+            <div class="content-container-soloimg">
+                <p><span>{{projeto.description}}</span></p>
+            </div>
+            {% endif %}
+            </div>
+            <div class="image-container-soloimg">
+                <img class="project-solo-imagens" src="{{ projeto.cover.url }}" alt="projetos">
+            </div>
+        </div>
+        {% if projeto.cover_2 %}
+        <div class="secimages-container-soloimg">
+            <img class="project-solo-imagens" src="{{ projeto.cover_2.url }}" alt="projetos">
+        </div>
+        {% endif %}
+        
+        {% if projeto.cover_3 %}
+        <div class="secimages-container-soloimg">
+            <img class="project-solo-imagens" src="{{ projeto.cover_3.url }}" alt="projetos">
+        </div>
+        {% endif %}
+        {% if projeto.have_video  %}
+            {% if projeto.video_url %}
+            <div class="video-container-soloimg">
+                <iframe src="{{ projeto.video_url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            {% else %}
+            <div class="video_download-container-soloimg">
+                <video autoplay muted loop playsinline>
+                    <source src="{{ projeto.video_download.url }}">
+                </video>
+            </div>
+            {% endif %}
+        {% endif %}
+    </div>
+    {% endif %}
+</div>
+
+
+

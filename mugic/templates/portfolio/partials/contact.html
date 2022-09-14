@@ -1,0 +1,35 @@
+{% load static %}
+
+<div class="main-container-contact" id="contact">
+    <div class="title-container-contact">
+        <h2><span style="font-size: 5rem">CONTACT</span></h2>
+    </div>
+    <div class="Formulario-container-email">
+        <div class="info-container-contact">
+            <div class="container-span-contact">
+            <span style="font-size:1.8rem"><strong>FOR QUESTIONS AND PROJECTS</strong></span>
+            </div>
+            <p><span style="font-size: 1.8rem padding-left: 2rem">Email: contact@mugic.me</span></p>
+            <div class="img-container-contact">
+            <img src="{% static 'mugic/img/PatterMugic_site.png'%}" alt="">
+            </div>
+        </div>
+        <form method="POST" class="input-container-contact">
+            {% csrf_token %}
+            <div>
+                <input type="text" name="name" id="" class="input" placeholder="Name">
+            </div>
+
+            <div>
+                <input type="text" name="email" class="input" placeholder="Email">
+            </div>
+
+            <div>
+                <textarea name="clientmessage" class="msg-email" cols="30" rows="10" placeholder="Message"></textarea>
+            </div>
+            <div>
+                <input type="Submit" name="btn submit-btn" value="Send Message">
+            </div>
+        </form>
+    </div>
+</div>

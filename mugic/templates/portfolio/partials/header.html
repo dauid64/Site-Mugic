@@ -1,0 +1,15 @@
+{% load static %}
+
+<header>
+    <div class="main-header-logo">
+        <a href="/"><img src="{% static 'mugic/img/mugic_logo.png' %}" alt="logo mugic" width="150" ></a>
+    </div>
+    {% if not is_detail_page %}
+    <div class="main-header-menu">
+        <a href="#home">HOME</a>
+        <a href="#portfolio">PROJECTS</a>
+        <a href="#about">ABOUT</a>
+        <a href="#contact">CONTACT</a>
+    </div>
+    {% endif %}
+</header>

@@ -1,0 +1,12 @@
+{% load static %}
+
+<div class="main-video-container" id="home">
+    <div class="arrow-container">
+        <a href="#portfolio">
+            <img id="down-arrow" src="{% static 'mugic/img/down-arrow.png'%}" alt="">
+        </a>
+    </div>
+    <video autoplay muted loop playsinline>
+        <source src="{% static 'mugic/movie/Final_Monster.mp4' type=video/mp4 %}">
+    </video>
+</div>

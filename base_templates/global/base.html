@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    {% include "portfolio/partials/head.html" %}
+    <title>{%block title%}{%endblock%}</title>
+</head>
+<body>
+
+    {% include "portfolio/partials/header.html" %}
+
+    {%block video%}{%endblock%}
+    
+    <main class="main-content-container">
+        {% block projetos %}{% endblock%}
+    </main>
+    {% if not is_detail_page %}
+    {% include "portfolio/partials/about.html"%}
+
+    {% include "portfolio/partials/contact.html" %}
+
+    {% endif %}
+
+    {% include "portfolio/partials/footer.html"%}
+    
+</body>
+
+</html>

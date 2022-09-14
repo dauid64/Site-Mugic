@@ -1,0 +1,19 @@
+{% extends "global/base.html" %}
+
+{%block title%}Home{%endblock%}
+
+{%block title_projects%}
+{%include 'portfolio/partials/title_projects.html'%}
+{%endblock%}
+
+{%block video%}
+{% include 'portfolio/partials/video.html'%}
+{%endblock%}
+
+{% block projetos %}
+<div class="main-content main-content-list container">
+    {% for projeto in projetos %}
+        {% include 'portfolio/partials/projects.html'%}
+    {% endfor %}
+</div>
+{% endblock%}
