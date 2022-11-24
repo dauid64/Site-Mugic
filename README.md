@@ -1,9 +1,9 @@
 # Site-Mugic
 
-Developed with Django
+Desenvolvido com Django
 
-Website I made for the 3D game and development company I work for called Mugic to serve as a presentation of their projects and about the company.
+Site que desenvolvi para empresa que trabalhei de desenvolvimento 3D. Objetivo do site era servir como portfolio da empresa mostrando seus melhores trabalhos, informações sobre a empresa e formas de contato, utilizando uma interface simples, porém divertida.
 
-Website Deployment Made in AWS.
+Deploy feito na AWS.
 
-You can access the site through the link: mugic.me
+Podendo ser acessada pelo link: mugic.me
